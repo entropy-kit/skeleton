@@ -1,0 +1,8 @@
+.env.*
+!.env.example
+*.log
+.npm
+.pnp.*
+.yarn
+build
+node_modules
