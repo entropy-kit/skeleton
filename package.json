@@ -10,11 +10,13 @@
     "db:pull": "prisma db pull --schema=./database/schema.prisma",
     "db:push": "prisma db push --schema=./database/schema.prisma",
     "dev": "concurrently -r \"tsc --watch\" \"wait-on ./build/main.js && node ./build/main.js\"",
+    "format": "prettier --write .",
     "prod": "node ./build/main.js"
   },
   "devDependencies": {
     "@types/node": "^22.15.17",
     "concurrently": "^9.1.2",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.3",
     "wait-on": "^8.0.3"
   },
