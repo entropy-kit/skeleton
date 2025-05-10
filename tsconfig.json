@@ -4,6 +4,7 @@
     "module": "preserve",
     "outDir": "build",
     "resolveJsonModule": true,
+    "strict": true,
     "target": "es2024"
   }
 }

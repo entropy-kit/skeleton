@@ -1,10 +1,17 @@
 {
   "name": "entropy",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "main": "./build/main.js",
-  "repository": "https://github.com/entropy-kit/skeleton.git",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "db:migrate": "prisma migrate dev --schema=./database/schema.prisma",
+    "db:migrate:deploy": "prisma migrate deploy --schema=./database/schema.prisma",
+    "db:pull": "prisma db pull --schema=./database/schema.prisma",
+    "db:push": "prisma db push --schema=./database/schema.prisma",
+    "dev": "concurrently -r \"tsc --watch\" \"wait-on ./build/main.js && node ./build/main.js\"",
+    "prod": "node ./build/main.js"
+  },
   "devDependencies": {
     "@types/node": "^22.15.17",
     "concurrently": "^9.1.2",
