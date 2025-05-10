@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["es2024"],
+    "module": "preserve",
+    "outDir": "build",
+    "resolveJsonModule": true,
+    "target": "es2024"
+  }
+}
